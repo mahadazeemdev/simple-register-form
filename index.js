@@ -20,11 +20,11 @@ const port = process.env.DB_PORT || 3000;
 async function start() {
     try {
         await createFormTable();
-        app.listen(port, () => {
-            console.log(`Server started on port ${port}. And all tables created successfully.`);
-        })
     } catch (error) {
         console.log(error);
     }
 }
 start();
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server started on port ${port}. And all tables created successfully.`);
+})
