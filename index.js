@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 // Routes
 app.use('/', formRoute);
 
-const port = process.env.DB_PORT;
+const port = process.env.DB_PORT || 3000;
 async function start() {
     try {
         await createFormTable();
